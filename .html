@@ -1,1 +1,129 @@
+<!DOCTYPE html>
+ <!-- Name: Tamera August  
+    File: homework3.html
+    Date Created: 2025-09-22
+    Date Updated: 2025-12-01
+    Purpose: Homework 3 Patient Registration Form with updated variables
+-->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Saad Hospital Registration Form</title>
+    <link rel="stylesheet" href="homework3.css">
+</head>
 
+<body>
+
+<h2 id="welcomeMsg"></h2>
+
+<label id="newUserBox" style="display:none;">
+    <input type="checkbox" id="newUserCheck">
+    Not <span id="storedName"></span>? Click HERE to start as a NEW USER
+</label>
+
+<div class="form-container">
+    <div class="header">
+        <table width="100%">
+            <tr>
+                <td>
+                    <img class="logo" src="pharm.png" alt="Hospital Logo" height="60px" width="50px">
+                </td>
+                <td class="title" valign="top" align="center">
+                    SAAD PATIENT REGISTRATION FORM
+                </td>
+                <td valign="bottom" align="right">
+                    Today's date: <span class="today"></span>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<hr>
+
+<div id="body">
+
+<form name="signup" id="signup" action="homework3-thanks.html">
+
+<table class="form">
+
+<tr class="form">
+<th class="form" colspan="4">Pateint Information</th>
+</tr>
+
+<tr class="form">
+<td align="right"><label>Name</label></td>
+<td>
+<input type="text" id="firstname" name="firstname" placeholder="First" required>
+<input type="text" id="middleinit" name="middleinit" placeholder="M" required>
+<input type="text" id="lastname" name="lastname" placeholder="Last" required>
+</td>
+</tr>
+
+<tr class="form">
+<td align="right"><label>Email Address</label></td>
+<td><input type="email" id="email" required></td>
+</tr>
+
+<tr class="form">
+<td align="right"><label>Date of Birth</label></td>
+<td><input type="date" id="dob" required></td>
+</tr>
+
+<tr class="form">
+<td align="right"><label>SSN</label></td>
+<td><input type="password" id="ssn" required></td>
+</tr>
+
+<tr class="form">
+<td align="right"><label>Phone</label></td>
+<td><input type="text" id="phone" required></td>
+</tr>
+
+<tr class="form">
+<td align="right"><label>Username</label></td>
+<td><input type="text" id="un" required></td>
+</tr>
+
+<tr class="form">
+<td align="right"><label>Password</label></td>
+<td><input type="password" id="pass" required></td>
+</tr>
+
+<tr class="form">
+<td align="right"><label>Re-type Password</label></td>
+<td><input type="password" id="pass2" required></td>
+</tr>
+
+<tr>
+<td colspan="2" align="center">
+<div class="remember-box">
+<input type="checkbox" id="rememberMe"> Remember Me
+</div>
+<br>
+<input type="submit" value="Submit">
+<input type="reset" value="Clear">
+</td>
+</tr>
+
+</table>
+</form>
+</div>
+
+<p id="outputformdata"></p>
+
+<div class="iframe-box">
+<iframe src="https://www.w3schools.com/js/js_api_fetch.asp"></iframe>
+</div>
+
+<footer>
+<p><a href="contact.html">Contact Us!</a></p>
+<script src="homework3.js"></script>
+</footer>
+
+<script>
+document.querySelector(".today").innerHTML = new Date().toLocaleDateString();
+</script>
+
+</body>
+</html>
